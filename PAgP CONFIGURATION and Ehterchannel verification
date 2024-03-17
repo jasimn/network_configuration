@@ -1,7 +1,7 @@
 
-#SWITCH1
+SWITCH1
 
-# Etherchannel PAgP Configuration 
+ Etherchannel PAgP Configuration 
 ---
 enable 
 conf t
@@ -11,9 +11,9 @@ int port-channel 1
 switchport mode trunk 
 ---
 
-# SWITCH 2
+ SWITCH 2
 
-## Etherchannel PAgP Configuration 
+Etherchannel PAgP Configuration 
 ---
 enable 
 conf t
@@ -22,5 +22,5 @@ channel-group 1 mode desirable
 int port-channel 1 
 switchport mode trunk 
 ---
-# EHERCHANNEL VERIFICATION 
+ EHERCHANNEL VERIFICATION 
 - show etherhannel summary
