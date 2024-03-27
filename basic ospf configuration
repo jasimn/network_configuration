@@ -34,6 +34,9 @@ conf t
 router ospf 1 
 auto-cost reference-bandwidth 100000
 do wr
+# ospf cost formula 
+ ospf cost = reference-bandwidth/interface bandwidth 
+
 
 
 
