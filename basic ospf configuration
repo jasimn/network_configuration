@@ -28,3 +28,13 @@ do wr
 2. show ip ospf database
 3. show ip protocols 
 
+# reference badwidth configure 
+en 
+conf t
+router ospf 1 
+auto-cost reference-bandwidth 100000
+do wr
+
+
+
+
