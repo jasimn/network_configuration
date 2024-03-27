@@ -1,0 +1,19 @@
+# router 1 
+en 
+conf t
+interface loopback 0
+ip address 192.168.56.11 255.255.255.0
+exit
+router ospf 1
+network 192.168.17.0 0.0.0.255 area 0
+do wr
+
+# router 2
+en 
+conf t
+interface loopback 0
+ip address 192.168.56.12 255.255.255.0
+exit
+router ospf 1
+network 192.168.17.0 0.0.0.255 area 0
+do wr
