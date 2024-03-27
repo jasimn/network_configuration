@@ -22,7 +22,7 @@ router ospf 1
 network 192.168.17.0 0.0.0.255 area 0
 do wr
 
-# ospf verication 
+# ospf verificacation 
 
 1. show ip ospf neighbor 
 2. show ip ospf database
