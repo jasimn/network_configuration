@@ -3,11 +3,11 @@
 
 enable
 configure terminal 
-monitor session 1 source interface interface-name 
+monitor session 1 source interface interface-name < both = received and transmit traffic ,rx = received traffic only , tx = transmit traffic only>
 monitor session 1 destination interface interface-name 
 do wr
 end
-
+!
 # remote span configuration 
 # step 1:
 ## switch 1 (configure vlan span  )
@@ -18,7 +18,7 @@ vlan 200
 remote-span
 do wr
 end
-
+!
  ## switch 2 (configure vlan span)
  
 configure terminal 
@@ -35,6 +35,7 @@ monitor session 1 source interface interface-name  rx
 monitor session 1 destination remote vlan 200
 do wr
 end
+!
 ## configure rspan on destination switch
 en
 conf t
@@ -42,11 +43,11 @@ monitor session 1 source remote vlan 200
 monitor session 1 destination interface interface-name
 do wr
 end
-
+!
 # verification 
 show vlan remote-span 
 show monitor 
-
+!
 
 
 
