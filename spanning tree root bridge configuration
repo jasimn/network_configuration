@@ -1,0 +1,13 @@
+# router 1 
+en 
+conf t
+spanning-tree vlan 10 root primary 
+# router 2
+en 
+conf t
+spanning-tree vlan 10 root secondary 
+# router 1
+## enabling rapid pvst+ 
+en 
+conf t
+spanning-tree mode rapid-pvst
