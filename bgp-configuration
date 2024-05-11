@@ -1,14 +1,18 @@
-# router 1 bgp configuration
+
+!# router 1 bgp configuration
 en
 conf t
+hostname R1
 router bgp 1
 neighbor 192.168.12.2 remote-as 2
-netwwork 1.1.1.1 mask 255.255.255.255
+network 1.1.1.1 mask 255.255.255.255
 do wr
 end
-# router 2 bgp configuration 
+--------------------------------
+!# router 2 bgp configuration 
 en
 conf t
+hostname R2
 router bgp 1
 neighbor 192.168.12.1 remote-as 1
 network 2.2.2.2 mask 255.255.255.255
