@@ -1,0 +1,8 @@
+# router 1 bgp configuration
+en
+conf t
+router bgp 1
+neighbor 192.168.12.1 remote-as 1
+netwwork 1.1.1.1 mask 255.255.255.255
+do wr
+end
