@@ -1,0 +1,31 @@
+! router 
+en
+conf t
+hostname R1
+int f0/0
+vrrp 1 ip 192.168.12.1 
+vrrp 1 name group1
+vrrp 1 priority 100
+vrrp 1 preempt
+do wr
+  end
+!
+-----------------------------  
+!router 2
+
+en
+conf t
+hostname R2 
+int f0/0
+vrrp 1 ip 192.168.12.1 
+vrrp 1 name group1
+vrrp 1 priority 100
+vrrp 1 preempt
+do wr
+  end
+
+! verifications:
+show vrrp brief
+show vrrp neighbors
+show vrrp all
+! the full form of vrrp is virtual redundency routinng protocols
